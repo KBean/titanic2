@@ -446,7 +446,10 @@
       "enabled": true,
       "n_estimators": {
         "values": [
-          100
+          100,
+          200,
+          300,
+          400
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -455,14 +458,17 @@
       "max_tree_depth": {
         "values": [
           6,
-          13
+          13,
+          20
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
       },
       "min_samples_leaf": {
         "values": [
-          1
+          1,
+          3,
+          5
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
