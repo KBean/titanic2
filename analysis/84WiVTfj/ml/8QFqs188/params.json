@@ -88,7 +88,7 @@
     "preprocessingFitSampleSeed": 1337,
     "per_feature": {
       "Embarked": {
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -100,7 +100,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": true,
+          "userModified": false,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -127,7 +127,7 @@
       },
       "Pclass": {
         "impute_constant_value": "0",
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -148,16 +148,16 @@
         "sendToInput": "main"
       },
       "Ticket": {
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
         "min_samples": 10,
-        "max_nb_categories": 50,
+        "max_nb_categories": 100,
         "max_cat_safety": 200,
         "dummy_drop": "AUTO",
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": true,
@@ -187,7 +187,7 @@
         "sendToInput": "main"
       },
       "Sex": {
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -199,7 +199,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": true,
+          "userModified": false,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Gender"
         },
@@ -209,7 +209,7 @@
       },
       "SibSp": {
         "impute_constant_value": "0",
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -277,7 +277,7 @@
       },
       "Parch": {
         "impute_constant_value": "0",
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -299,7 +299,7 @@
       },
       "ticket_class": {
         "impute_constant_value": "0",
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -323,7 +323,7 @@
         "generate_derivative": false,
         "numerical_handling": "REGULAR",
         "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
+        "missing_impute_with": "MEDIAN",
         "impute_constant_value": 0.0,
         "rescaling": "AVGSTD",
         "quantile_bin_nb_bins": 4,
@@ -341,7 +341,7 @@
         "sendToInput": "main"
       },
       "Cabin_check": {
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -353,7 +353,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": true,
+          "userModified": false,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -362,7 +362,7 @@
         "sendToInput": "main"
       },
       "Title": {
-        "category_handling": "IMPACT",
+        "category_handling": "DUMMIFY",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -374,30 +374,9 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": true,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
-      },
-      "Age_category": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
           "userModified": false,
           "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
+          "recordedMeaning": "Text"
         },
         "customHandlingCode": "",
         "customProcessorWantsMatrix": false,
@@ -406,38 +385,13 @@
     },
     "feature_generation": {
       "pairwise_linear": {
-        "behavior": "ENABLED_MANUAL"
+        "behavior": "DISABLED"
       },
       "polynomial_combinations": {
-        "behavior": "ENABLED_MANUAL"
+        "behavior": "DISABLED"
       },
       "manual_interactions": {
-        "interactions": [
-          {
-            "column_1": "Sex",
-            "column_2": "Title",
-            "max_features": 100,
-            "rescale": true
-          },
-          {
-            "column_1": "Sex",
-            "column_2": "Age",
-            "max_features": 100,
-            "rescale": true
-          },
-          {
-            "column_1": "SibSp",
-            "column_2": "Sex",
-            "max_features": 100,
-            "rescale": true
-          },
-          {
-            "column_1": "Sex",
-            "column_2": "ticket_class",
-            "max_features": 100,
-            "rescale": true
-          }
-        ]
+        "interactions": []
       },
       "numericals_clustering": {
         "k": 0,
@@ -530,7 +484,7 @@
       "max_feature_prop": 0.3
     },
     "extra_trees": {
-      "enabled": false,
+      "enabled": true,
       "n_estimators": {
         "values": [
           30
@@ -567,10 +521,11 @@
       "enabled": true,
       "n_estimators": {
         "values": [
+          100,
+          50,
           20,
-          15,
-          10,
-          25
+          75,
+          80
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -578,8 +533,8 @@
       "max_depth": {
         "values": [
           3,
-          2,
-          4
+          5,
+          6
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -604,7 +559,7 @@
         "values": [
           0.1,
           0.2,
-          0.3
+          0.4
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -615,7 +570,7 @@
             "enabled": true
           },
           "exponential": {
-            "enabled": true
+            "enabled": false
           }
         }
       }
@@ -674,7 +629,7 @@
       }
     },
     "decision_tree_classification": {
-      "enabled": false,
+      "enabled": true,
       "max_depth": {
         "values": [
           5
@@ -824,7 +779,7 @@
       "n_jobs": 2
     },
     "knn": {
-      "enabled": false,
+      "enabled": true,
       "k": {
         "values": [
           5
@@ -838,7 +793,7 @@
       "leaf_size": 30
     },
     "logistic_regression": {
-      "enabled": false,
+      "enabled": true,
       "multi_class": "ovr",
       "penalty": {
         "values": {
@@ -864,7 +819,7 @@
       "n_jobs": 2
     },
     "neural_network": {
-      "enabled": false,
+      "enabled": true,
       "layer_sizes": {
         "values": [
           10
@@ -893,7 +848,7 @@
       "learning_rate_init": 0.001
     },
     "svc_classifier": {
-      "enabled": false,
+      "enabled": true,
       "C": {
         "values": [
           1.0
@@ -965,7 +920,7 @@
       "max_iter": -1
     },
     "sgd_classifier": {
-      "enabled": false,
+      "enabled": true,
       "loss": {
         "values": {
           "log": {
@@ -1004,7 +959,7 @@
       "n_jobs": 2
     },
     "lars_params": {
-      "enabled": false,
+      "enabled": true,
       "max_features": 0,
       "K": 100
     },
@@ -1353,7 +1308,7 @@
       "mode": "KFOLD",
       "splitRatio": 0.8,
       "shuffleIterations": 1,
-      "nFolds": 5,
+      "nFolds": 3,
       "stratified": true,
       "strategy": "GRID",
       "randomized": true,
@@ -1362,7 +1317,7 @@
       "nJobs": 4
     },
     "metrics": {
-      "evaluationMetric": "LOG_LOSS",
+      "evaluationMetric": "ROC_AUC",
       "customEvaluationMetricGIB": true,
       "customEvaluationMetricNeedsProba": false,
       "thresholdOptimizationMetric": "F1",
@@ -1372,7 +1327,7 @@
         "fpGain": -0.3,
         "fnGain": 0.0
       },
-      "liftPoint": 0.5
+      "liftPoint": 0.4
     },
     "custom_mllib": [],
     "max_ensemble_nodes_serialized": 6000
