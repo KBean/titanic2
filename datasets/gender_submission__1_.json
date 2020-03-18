@@ -58,11 +58,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584537312129
+    "lastModifiedOn": 1584537320316
   },
   "creationTag": {
     "versionNumber": 0,
@@ -218,7 +218,8 @@
         "basic:COUNT_COLUMNS",
         "basic:COUNT_FILES",
         "basic:SIZE",
-        "records:COUNT_RECORDS"
+        "records:COUNT_RECORDS",
+        "col_stats:COUNT_DISTINCT:PassengerId"
       ]
     }
   },
