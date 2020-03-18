@@ -381,27 +381,6 @@
         "customHandlingCode": "",
         "customProcessorWantsMatrix": false,
         "sendToInput": "main"
-      },
-      "Age_category": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
-        "role": "INPUT",
-        "type": "NUMERIC",
-        "state": {
-          "userModified": false,
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "LongMeaning"
-        },
-        "customHandlingCode": "",
-        "customProcessorWantsMatrix": false,
-        "sendToInput": "main"
       }
     },
     "feature_generation": {
@@ -464,7 +443,7 @@
       "max_feature_prop": 0.3
     },
     "random_forest_classification": {
-      "enabled": true,
+      "enabled": false,
       "n_estimators": {
         "values": [
           100,
@@ -505,7 +484,7 @@
       "max_feature_prop": 0.3
     },
     "extra_trees": {
-      "enabled": true,
+      "enabled": false,
       "n_estimators": {
         "values": [
           30
@@ -650,7 +629,7 @@
       }
     },
     "decision_tree_classification": {
-      "enabled": true,
+      "enabled": false,
       "max_depth": {
         "values": [
           5
@@ -800,7 +779,7 @@
       "n_jobs": 2
     },
     "knn": {
-      "enabled": true,
+      "enabled": false,
       "k": {
         "values": [
           5
@@ -814,7 +793,7 @@
       "leaf_size": 30
     },
     "logistic_regression": {
-      "enabled": true,
+      "enabled": false,
       "multi_class": "ovr",
       "penalty": {
         "values": {
@@ -840,7 +819,7 @@
       "n_jobs": 2
     },
     "neural_network": {
-      "enabled": true,
+      "enabled": false,
       "layer_sizes": {
         "values": [
           10
@@ -869,7 +848,7 @@
       "learning_rate_init": 0.001
     },
     "svc_classifier": {
-      "enabled": true,
+      "enabled": false,
       "C": {
         "values": [
           1.0
@@ -941,7 +920,7 @@
       "max_iter": -1
     },
     "sgd_classifier": {
-      "enabled": true,
+      "enabled": false,
       "loss": {
         "values": {
           "log": {
@@ -980,12 +959,12 @@
       "n_jobs": 2
     },
     "lars_params": {
-      "enabled": true,
+      "enabled": false,
       "max_features": 0,
       "K": 100
     },
     "xgboost": {
-      "enabled": true,
+      "enabled": false,
       "max_depth": {
         "values": [
           3
