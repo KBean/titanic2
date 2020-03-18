@@ -198,13 +198,31 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "if(Cabin_0\u003d\u003dCabin_1 || Cabin_1\u003d\u003d\"\", Cabin_0, 1)",
+        "expression": "if(Cabin_0\u003d\u003dCabin_1 || Cabin_1\u003d\u003d\"\", Cabin_0, F)",
         "column": "Cabin_check"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "Cabin_0",
+          "Cabin_1",
+          "Cabin_2",
+          "Cabin_3",
+          "Cabin"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     }
