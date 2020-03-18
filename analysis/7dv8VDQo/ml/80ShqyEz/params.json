@@ -465,7 +465,7 @@
       "max_feature_prop": 0.3
     },
     "random_forest_classification": {
-      "enabled": true,
+      "enabled": false,
       "n_estimators": {
         "values": [
           100
@@ -504,7 +504,7 @@
       "max_feature_prop": 0.3
     },
     "extra_trees": {
-      "enabled": true,
+      "enabled": false,
       "n_estimators": {
         "values": [
           30
@@ -541,14 +541,24 @@
       "enabled": true,
       "n_estimators": {
         "values": [
-          100
+          100,
+          150,
+          200,
+          250,
+          300,
+          350
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
       },
       "max_depth": {
         "values": [
-          3
+          3,
+          5,
+          6,
+          7,
+          8,
+          2
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -571,7 +581,10 @@
       "max_feature_prop": 0.3,
       "learning_rate": {
         "values": [
-          0.1
+          0.1,
+          0.01,
+          1.0,
+          10.0
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -582,7 +595,7 @@
             "enabled": true
           },
           "exponential": {
-            "enabled": false
+            "enabled": true
           }
         }
       }
@@ -641,7 +654,7 @@
       }
     },
     "decision_tree_classification": {
-      "enabled": true,
+      "enabled": false,
       "max_depth": {
         "values": [
           5
@@ -791,7 +804,7 @@
       "n_jobs": 2
     },
     "knn": {
-      "enabled": true,
+      "enabled": false,
       "k": {
         "values": [
           5
@@ -805,7 +818,7 @@
       "leaf_size": 30
     },
     "logistic_regression": {
-      "enabled": true,
+      "enabled": false,
       "multi_class": "ovr",
       "penalty": {
         "values": {
@@ -831,7 +844,7 @@
       "n_jobs": 2
     },
     "neural_network": {
-      "enabled": true,
+      "enabled": false,
       "layer_sizes": {
         "values": [
           10
@@ -860,7 +873,7 @@
       "learning_rate_init": 0.001
     },
     "svc_classifier": {
-      "enabled": true,
+      "enabled": false,
       "C": {
         "values": [
           1.0
@@ -932,7 +945,7 @@
       "max_iter": -1
     },
     "sgd_classifier": {
-      "enabled": true,
+      "enabled": false,
       "loss": {
         "values": {
           "log": {
@@ -971,12 +984,12 @@
       "n_jobs": 2
     },
     "lars_params": {
-      "enabled": true,
+      "enabled": false,
       "max_features": 0,
       "K": 100
     },
     "xgboost": {
-      "enabled": true,
+      "enabled": false,
       "max_depth": {
         "values": [
           1,
