@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584539253884
+    "lastModifiedOn": 1584539772161
   },
   "creationTag": {
     "versionNumber": 0,
@@ -135,27 +135,7 @@
         "type": "bigint"
       },
       {
-        "name": "Cabin",
-        "type": "string"
-      },
-      {
-        "name": "Cabin_0",
-        "type": "string"
-      },
-      {
-        "name": "Cabin_1",
-        "type": "string"
-      },
-      {
         "name": "Cabin_check",
-        "type": "string"
-      },
-      {
-        "name": "Cabin_2",
-        "type": "string"
-      },
-      {
-        "name": "Cabin_3",
         "type": "string"
       },
       {
