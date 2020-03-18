@@ -136,7 +136,7 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "FindReplace",
@@ -157,6 +157,56 @@
         "matching": "SUBSTRING"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 4
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "Cabin",
+        "keepEmptyChunks": false,
+        "limit": 0,
+        "separator": " ",
+        "outColPrefix": "Cabin_",
+        "limitOutput": false,
+        "target": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "StringTransformer",
+      "params": {
+        "mode": "TRUNCATE",
+        "columns": [
+          "Cabin_0",
+          "Cabin_2",
+          "Cabin_1",
+          "Cabin_3"
+        ],
+        "appliesTo": "COLUMNS",
+        "truncate_limit": 1
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(Cabin_0\u003d\u003dCabin_1 || Cabin_1\u003d\u003d\"\", Cabin_0, 1)",
+        "column": "Cabin_check"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -167,27 +217,32 @@
   },
   "analysisColumnData": {},
   "columnWidthsByName": {
-    "Embarked": 100,
-    "Survived": 100,
     "Pclass": 100,
-    "Ticket": 100,
-    "PassengerId": 100,
     "Name_1_2": 100,
     "Sex": 100,
     "Attribute2": 100,
     "gender_flag": 100,
     "Attribute1": 225,
-    "SibSp": 100,
     "Attribute0": 100,
     "Name": 300,
-    "Fare": 100,
-    "Parch": 100,
     "Cabin": 100,
     "Name_1_1": 225,
     "Name_1_0": 100,
+    "Age": 100,
+    "Embarked": 100,
+    "Cabin_3": 100,
+    "Survived": 100,
+    "Ticket": 100,
+    "Cabin_2": 100,
+    "PassengerId": 100,
+    "Cabin_1": 100,
+    "Cabin_0": 100,
+    "SibSp": 100,
+    "Fare": 100,
+    "Parch": 100,
+    "Cabin_check": 100,
     "married": 100,
     "ticket_class": 105,
-    "Age": 100,
     "Name_1": 239,
     "Name_0": 113
   },
