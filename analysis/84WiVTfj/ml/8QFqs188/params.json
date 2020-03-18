@@ -443,7 +443,7 @@
       "max_feature_prop": 0.3
     },
     "random_forest_classification": {
-      "enabled": true,
+      "enabled": false,
       "n_estimators": {
         "values": [
           100,
@@ -521,14 +521,20 @@
       "enabled": true,
       "n_estimators": {
         "values": [
-          100
+          100,
+          50,
+          20,
+          75,
+          80
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
       },
       "max_depth": {
         "values": [
-          3
+          3,
+          5,
+          6
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -551,7 +557,10 @@
       "max_feature_prop": 0.3,
       "learning_rate": {
         "values": [
-          0.1
+          0.1,
+          0.0,
+          0.2,
+          0.04
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -621,7 +630,7 @@
       }
     },
     "decision_tree_classification": {
-      "enabled": true,
+      "enabled": false,
       "max_depth": {
         "values": [
           5
@@ -785,7 +794,7 @@
       "leaf_size": 30
     },
     "logistic_regression": {
-      "enabled": true,
+      "enabled": false,
       "multi_class": "ovr",
       "penalty": {
         "values": {
@@ -956,7 +965,7 @@
       "K": 100
     },
     "xgboost": {
-      "enabled": true,
+      "enabled": false,
       "max_depth": {
         "values": [
           3
