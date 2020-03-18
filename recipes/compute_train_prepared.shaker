@@ -240,6 +240,47 @@
         ]
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "RoundProcessor",
+      "params": {
+        "mode": "ROUND",
+        "places": 0,
+        "columns": [
+          "Age"
+        ],
+        "precision": 0,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "Age"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "28"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if (Age\u003c5, 1, if(Age\u003c\u003d15, 2, if(Age\u003c\u003d36, 3, if(Age\u003c\u003d55, 4,5)))))",
+        "column": "Age_category"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -262,6 +303,7 @@
     "Name_1_1": 225,
     "Name_1_0": 100,
     "Age": 100,
+    "Age_category": 105,
     "Embarked": 100,
     "Cabin_3": 100,
     "Survived": 100,
