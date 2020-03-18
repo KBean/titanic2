@@ -518,7 +518,7 @@
       "max_feature_prop": 0.3
     },
     "gbt_classification": {
-      "enabled": false,
+      "enabled": true,
       "n_estimators": {
         "values": [
           100
@@ -621,7 +621,7 @@
       }
     },
     "decision_tree_classification": {
-      "enabled": false,
+      "enabled": true,
       "max_depth": {
         "values": [
           5
@@ -956,7 +956,7 @@
       "K": 100
     },
     "xgboost": {
-      "enabled": false,
+      "enabled": true,
       "max_depth": {
         "values": [
           3
