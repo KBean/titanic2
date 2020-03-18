@@ -391,7 +391,20 @@
         "behavior": "ENABLED_MANUAL"
       },
       "manual_interactions": {
-        "interactions": []
+        "interactions": [
+          {
+            "column_1": "Fare",
+            "column_2": "Pclass",
+            "max_features": 100,
+            "rescale": true
+          },
+          {
+            "column_1": "Title",
+            "column_2": "ticket_class",
+            "max_features": 100,
+            "rescale": true
+          }
+        ]
       },
       "numericals_clustering": {
         "k": 0,
@@ -1311,20 +1324,20 @@
       "stratified": true,
       "strategy": "GRID",
       "randomized": true,
-      "nIter": 10,
+      "nIter": 0,
       "timeout": 0,
       "nJobs": 4
     },
     "metrics": {
-      "evaluationMetric": "ROC_AUC",
+      "evaluationMetric": "LOG_LOSS",
       "customEvaluationMetricGIB": true,
       "customEvaluationMetricNeedsProba": false,
       "thresholdOptimizationMetric": "F1",
       "costMatrixWeights": {
         "tpGain": 1.0,
-        "tnGain": 1.0,
-        "fpGain": -0.4,
-        "fnGain": -0.4
+        "tnGain": 0.0,
+        "fpGain": -0.3,
+        "fnGain": 0.0
       },
       "liftPoint": 0.5
     },
