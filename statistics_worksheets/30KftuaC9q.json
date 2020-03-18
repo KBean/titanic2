@@ -29,16 +29,394 @@
     "type": "worksheet_root",
     "confidenceLevel": 0.95,
     "showConfidenceInterval": false,
-    "cards": [],
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": false,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": false,
+        "xColumns": [
+          {
+            "name": "Survived",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Sex",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Age",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Survived",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "VoZh0Du"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "CY8hinT"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "GfMTrKP"
+              }
+            ],
+            "id": "6lPz1JV"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Sex",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "KOmLmzd"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "x30Bqm6"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Sex",
+                  "type": "CATEGORICAL"
+                },
+                "id": "qs1PuN4"
+              }
+            ],
+            "id": "uhPGsW2"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Age",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "kDNt9HF"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "rvfukmy"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "Age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "C6yzhdJ"
+              }
+            ],
+            "id": "SLABxNu"
+          }
+        ],
+        "id": "rRVmBWf"
+      },
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "Survived",
+          "type": "CATEGORICAL"
+        },
+        "showMosaicPlot": true,
+        "showHistogram": true,
+        "showScatterPlot": false,
+        "showFrequencyTable": true,
+        "showBoxPlot": false,
+        "showSummary": false,
+        "xColumns": [
+          {
+            "name": "Age",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "Sex",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Age",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Age",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "J3Dn82q"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Age",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "JX3HEbk"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Age",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "nvM3ZrY"
+              }
+            ],
+            "id": "JlodaSn"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "Sex",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "BUsTqKa"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "n3FnC8V"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "Sex",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "Survived",
+                  "type": "CATEGORICAL"
+                },
+                "id": "NtYsLf9"
+              }
+            ],
+            "id": "EaVzvjy"
+          }
+        ],
+        "id": "tgdNU1f"
+      }
+    ],
     "id": "itW4skx"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584543082253
+    "lastModifiedOn": 1584543150838
   },
   "creationTag": {
     "versionNumber": 0,
