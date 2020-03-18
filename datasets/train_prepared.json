@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584539848202
+    "lastModifiedOn": 1584543534259
   },
   "creationTag": {
     "versionNumber": 0,
@@ -113,6 +113,10 @@
       {
         "name": "Age",
         "type": "double"
+      },
+      {
+        "name": "Age_category",
+        "type": "bigint"
       },
       {
         "name": "SibSp",
