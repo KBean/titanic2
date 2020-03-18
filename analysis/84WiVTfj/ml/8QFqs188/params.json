@@ -1323,10 +1323,10 @@
       "costMatrixWeights": {
         "tpGain": 1.0,
         "tnGain": 0.0,
-        "fpGain": -0.3,
+        "fpGain": -0.4,
         "fnGain": 0.0
       },
-      "liftPoint": 0.4
+      "liftPoint": 0.7
     },
     "custom_mllib": [],
     "max_ensemble_nodes_serialized": 6000
