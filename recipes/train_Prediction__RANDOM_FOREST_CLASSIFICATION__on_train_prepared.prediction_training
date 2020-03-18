@@ -68,12 +68,12 @@
     "metrics": {
       "customEvaluationMetricGIB": true,
       "costMatrixWeights": {
-        "fpGain": -0.3,
+        "fpGain": -0.4,
         "tpGain": 1.0,
-        "fnGain": 0.0,
-        "tnGain": 0.0
+        "fnGain": -0.4,
+        "tnGain": 1.0
       },
-      "liftPoint": 0.4,
+      "liftPoint": 0.5,
       "evaluationMetric": "ROC_AUC",
       "customEvaluationMetricNeedsProba": false,
       "thresholdOptimizationMetric": "F1"
@@ -82,7 +82,7 @@
       "loss": {
         "values": {
           "exponential": {
-            "enabled": false
+            "enabled": true
           },
           "deviance": {
             "enabled": true
@@ -100,19 +100,18 @@
       "max_depth": {
         "values": [
           3,
-          5,
-          6
+          2,
+          4
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
       },
       "n_estimators": {
         "values": [
-          100,
-          50,
           20,
-          75,
-          80
+          15,
+          10,
+          25
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -122,7 +121,7 @@
         "values": [
           0.1,
           0.2,
-          0.4
+          0.3
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -141,8 +140,8 @@
     "grid_search_params": {
       "mode": "KFOLD",
       "nJobs": 4,
-      "nFolds": 3,
-      "nIter": 0,
+      "nFolds": 5,
+      "nIter": 10,
       "stratified": true,
       "strategy": "GRID",
       "shuffleIterations": 1,
@@ -152,10 +151,10 @@
     },
     "skipExpensiveReports": false,
     "algorithm": "GBT_CLASSIFICATION",
-    "gridLength": 45
+    "gridLength": 72
   },
   "partSource": "ACTIVE_VERSION",
-  "generatingModelId": "A-TITANIC-84WiVTfj-8QFqs188-s3-pp1-m1",
+  "generatingModelId": "A-TITANIC-84WiVTfj-8QFqs188-s7-pp6-m1",
   "preprocessing": {
     "reduce": {
       "kept_variance": 0.0,
@@ -408,7 +407,7 @@
       "Cabin_check": {
         "min_samples": 10,
         "missing_impute_with": "MODE",
-        "role": "REJECT",
+        "role": "INPUT",
         "dummy_drop": "NONE",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -473,7 +472,7 @@
     "skipPreprocessing": false,
     "feature_generation": {
       "polynomial_combinations": {
-        "behavior": "DISABLED"
+        "behavior": "ENABLED_MANUAL"
       },
       "manual_interactions": {
         "interactions": []
@@ -490,7 +489,7 @@
         "behavior": "DISABLED"
       },
       "pairwise_linear": {
-        "behavior": "DISABLED"
+        "behavior": "ENABLED_MANUAL"
       }
     },
     "preprocessingFitSampleRatio": 1.0,
