@@ -543,11 +543,7 @@
       "enabled": true,
       "n_estimators": {
         "values": [
-          100,
-          50,
-          20,
-          75,
-          80
+          20
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
