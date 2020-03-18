@@ -3,14 +3,14 @@
   "centileSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
-  "defaultOutputIndex": 1,
   "preFilter": {
     "distinct": false,
     "enabled": false
   },
+  "defaultOutputIndex": 1,
   "seed": 1337,
   "randomColumns": [],
   "centileOrders": [],
@@ -18,17 +18,18 @@
   "randomSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "randomColumnsSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "computedColumns": [],
   "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
   "centileTDigest": false,
   "valueSplits": [
     {
@@ -88,7 +89,80 @@
       "filter": {
         "uiData": {
           "mode": "\u0026\u0026",
-          "conditions": []
+          "conditions": [
+            {
+              "input": "Survived",
+              "col": "Survived",
+              "num": 0,
+              "operator": "not empty string"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "PassengerId",
+                "type": "bigint"
+              },
+              {
+                "name": "Survived",
+                "type": "bigint"
+              },
+              {
+                "name": "Pclass",
+                "type": "bigint"
+              },
+              {
+                "name": "Name",
+                "type": "string"
+              },
+              {
+                "name": "Title",
+                "type": "string"
+              },
+              {
+                "name": "Sex",
+                "type": "string"
+              },
+              {
+                "name": "Age",
+                "type": "double"
+              },
+              {
+                "name": "SibSp",
+                "type": "bigint"
+              },
+              {
+                "name": "Parch",
+                "type": "bigint"
+              },
+              {
+                "name": "Ticket",
+                "type": "string"
+              },
+              {
+                "name": "Fare",
+                "type": "double"
+              },
+              {
+                "name": "ticket_class",
+                "type": "bigint"
+              },
+              {
+                "name": "Cabin_check",
+                "type": "string"
+              },
+              {
+                "name": "Embarked",
+                "type": "string"
+              }
+            ]
+          },
+          "validated": true,
+          "fullyTranslated": false,
+          "ok": false,
+          "message": "Filter expression is invalid"
         },
         "distinct": false,
         "enabled": true
