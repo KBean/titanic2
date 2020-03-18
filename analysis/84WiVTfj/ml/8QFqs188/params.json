@@ -88,7 +88,7 @@
     "preprocessingFitSampleSeed": 1337,
     "per_feature": {
       "Embarked": {
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -100,7 +100,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -127,7 +127,7 @@
       },
       "Pclass": {
         "impute_constant_value": "0",
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -148,7 +148,7 @@
         "sendToInput": "main"
       },
       "Ticket": {
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -187,7 +187,7 @@
         "sendToInput": "main"
       },
       "Sex": {
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -199,7 +199,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Gender"
         },
@@ -209,7 +209,7 @@
       },
       "SibSp": {
         "impute_constant_value": "0",
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -277,7 +277,7 @@
       },
       "Parch": {
         "impute_constant_value": "0",
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -299,7 +299,7 @@
       },
       "ticket_class": {
         "impute_constant_value": "0",
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "IMPUTE",
         "missing_impute_with": "MODE",
         "dummy_clip": "CUMULATIVE_PROPORTION",
@@ -323,7 +323,7 @@
         "generate_derivative": false,
         "numerical_handling": "REGULAR",
         "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEDIAN",
+        "missing_impute_with": "MEAN",
         "impute_constant_value": 0.0,
         "rescaling": "AVGSTD",
         "quantile_bin_nb_bins": 4,
@@ -341,7 +341,7 @@
         "sendToInput": "main"
       },
       "Cabin_check": {
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -353,7 +353,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -362,7 +362,7 @@
         "sendToInput": "main"
       },
       "Title": {
-        "category_handling": "DUMMIFY",
+        "category_handling": "IMPACT",
         "missing_handling": "NONE",
         "missing_impute_with": "MODE",
         "dummy_clip": "MAX_NB_CATEGORIES",
@@ -374,7 +374,7 @@
         "role": "INPUT",
         "type": "CATEGORY",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "Text"
         },
@@ -393,13 +393,25 @@
       "manual_interactions": {
         "interactions": [
           {
-            "column_1": "Fare",
-            "column_2": "Pclass",
+            "column_1": "Sex",
+            "column_2": "Title",
             "max_features": 100,
             "rescale": true
           },
           {
-            "column_1": "Title",
+            "column_1": "Sex",
+            "column_2": "Age",
+            "max_features": 100,
+            "rescale": true
+          },
+          {
+            "column_1": "SibSp",
+            "column_2": "Sex",
+            "max_features": 100,
+            "rescale": true
+          },
+          {
+            "column_1": "Sex",
             "column_2": "ticket_class",
             "max_features": 100,
             "rescale": true
@@ -456,7 +468,7 @@
       "max_feature_prop": 0.3
     },
     "random_forest_classification": {
-      "enabled": false,
+      "enabled": true,
       "n_estimators": {
         "values": [
           100,
@@ -976,7 +988,7 @@
       "K": 100
     },
     "xgboost": {
-      "enabled": false,
+      "enabled": true,
       "max_depth": {
         "values": [
           3
