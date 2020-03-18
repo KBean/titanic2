@@ -1,0 +1,82 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {
+      "PassengerId": 100,
+      "Survived": 100,
+      "Pclass": 100,
+      "Name": 300,
+      "Attribute0": 100,
+      "Sex": 100,
+      "Age": 100,
+      "SibSp": 100,
+      "Parch": 100,
+      "Ticket": 100,
+      "Fare": 100,
+      "ticket_class": 105,
+      "Cabin": 100,
+      "Cabin_0": 100,
+      "Cabin_1": 100,
+      "Cabin_check": 100,
+      "Cabin_2": 100,
+      "Cabin_3": 100,
+      "Embarked": 100
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": true,
+          "uiData": {
+            "mode": "\u0026\u0026",
+            "conditions": [
+              {
+                "input": "Cabin_check",
+                "operator": "\u003d\u003d [string]",
+                "col": "Survived",
+                "string": "1",
+                "num": 0.0
+              }
+            ]
+          }
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 2
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": []
+}
