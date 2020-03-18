@@ -225,6 +225,21 @@
         "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnRenamer",
+      "params": {
+        "renamings": [
+          {
+            "from": "Attribute0",
+            "to": "Title"
+          }
+        ]
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -255,6 +270,7 @@
     "PassengerId": 100,
     "Cabin_1": 100,
     "Cabin_0": 100,
+    "Title": 100,
     "SibSp": 100,
     "Fare": 100,
     "Parch": 100,
