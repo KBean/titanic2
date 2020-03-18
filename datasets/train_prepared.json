@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584537572780
+    "lastModifiedOn": 1584538712189
   },
   "creationTag": {
     "versionNumber": 0,
@@ -103,6 +103,10 @@
         "type": "string"
       },
       {
+        "name": "Attribute0",
+        "type": "string"
+      },
+      {
         "name": "Sex",
         "type": "string"
       },
@@ -125,6 +129,10 @@
       {
         "name": "Fare",
         "type": "double"
+      },
+      {
+        "name": "ticket_class",
+        "type": "bigint"
       },
       {
         "name": "Cabin",
