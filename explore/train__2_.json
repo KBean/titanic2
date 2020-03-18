@@ -77,10 +77,22 @@
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
-        "maxStoredBytes": 104857600,
+        "maxStoredBytes": -1,
         "filter": {
           "distinct": false,
-          "enabled": false
+          "enabled": false,
+          "uiData": {
+            "mode": "\u0026\u0026",
+            "conditions": [
+              {
+                "input": "PassengerId",
+                "operator": "contains",
+                "col": "Survived",
+                "string": "892",
+                "num": 0.0
+              }
+            ]
+          }
         },
         "partitionSelectionMethod": "ALL",
         "latestPartitionsN": 1,
@@ -95,7 +107,7 @@
         "maxReadUncompressedBytes": -1
       },
       "autoRefreshSample": false,
-      "_refreshTrigger": 0
+      "_refreshTrigger": 4
     },
     "vizSampling": {
       "autoRefreshSample": false,
@@ -180,6 +192,7 @@
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
         },
+        "computeMode": "NORMAL",
         "xAxisMode": "NORMAL",
         "yAxisMode": "NORMAL",
         "pieOptions": {
