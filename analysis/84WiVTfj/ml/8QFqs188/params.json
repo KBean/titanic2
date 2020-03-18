@@ -385,10 +385,10 @@
     },
     "feature_generation": {
       "pairwise_linear": {
-        "behavior": "DISABLED"
+        "behavior": "ENABLED_MANUAL"
       },
       "polynomial_combinations": {
-        "behavior": "DISABLED"
+        "behavior": "ENABLED_MANUAL"
       },
       "manual_interactions": {
         "interactions": []
@@ -1307,11 +1307,11 @@
       "mode": "KFOLD",
       "splitRatio": 0.8,
       "shuffleIterations": 1,
-      "nFolds": 3,
+      "nFolds": 5,
       "stratified": true,
       "strategy": "GRID",
       "randomized": true,
-      "nIter": 0,
+      "nIter": 10,
       "timeout": 0,
       "nJobs": 4
     },
@@ -1322,11 +1322,11 @@
       "thresholdOptimizationMetric": "F1",
       "costMatrixWeights": {
         "tpGain": 1.0,
-        "tnGain": 0.0,
+        "tnGain": 1.0,
         "fpGain": -0.4,
-        "fnGain": 0.0
+        "fnGain": -0.4
       },
-      "liftPoint": 0.7
+      "liftPoint": 0.5
     },
     "custom_mllib": [],
     "max_ensemble_nodes_serialized": 6000
