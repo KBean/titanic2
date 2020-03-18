@@ -11,6 +11,9 @@
           "map": {
             "train__2_": {
               "repartition": 10
+            },
+            "train__2__stacked": {
+              "repartition": 10
             }
           }
         },
@@ -69,11 +72,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584540278348
+    "lastModifiedOn": 1584540280990
   },
   "creationTag": {
     "versionNumber": 0,
