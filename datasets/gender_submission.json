@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584540719630
+    "lastModifiedOn": 1584540745997
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,18 +92,6 @@
       },
       {
         "name": "Survived",
-        "type": "string"
-      },
-      {
-        "name": "proba_0",
-        "type": "double"
-      },
-      {
-        "name": "proba_1",
-        "type": "double"
-      },
-      {
-        "name": "prediction",
         "type": "bigint"
       }
     ],
