@@ -99,14 +99,20 @@
       "max_feature_prop": 0.3,
       "max_depth": {
         "values": [
-          3
+          3,
+          5,
+          6
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
       },
       "n_estimators": {
         "values": [
-          100
+          100,
+          50,
+          20,
+          75,
+          80
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -114,7 +120,9 @@
       "selection_mode": "auto",
       "learning_rate": {
         "values": [
-          0.1
+          0.1,
+          0.2,
+          0.4
         ],
         "nValues": 0,
         "gridMode": "EXPLICIT"
@@ -144,10 +152,10 @@
     },
     "skipExpensiveReports": false,
     "algorithm": "GBT_CLASSIFICATION",
-    "gridLength": 1
+    "gridLength": 45
   },
   "partSource": "ACTIVE_VERSION",
-  "generatingModelId": "A-TITANIC-84WiVTfj-8QFqs188-s2-pp3-m1",
+  "generatingModelId": "A-TITANIC-84WiVTfj-8QFqs188-s3-pp1-m1",
   "preprocessing": {
     "reduce": {
       "kept_variance": 0.0,

@@ -3,7 +3,7 @@
   "rebuildBehavior": "EXPLICIT",
   "name": "Prediction (RANDOM_FOREST_CLASSIFICATION) on train_prepared",
   "contentType": "prediction/py_memory",
-  "activeVersion": "1584540600107",
+  "activeVersion": "1584541012159",
   "conditionalOutputs": [],
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -15,7 +15,7 @@
     "rebuildBehavior": "NORMAL",
     "crossProjectBuildBehavior": "DEFAULT"
   },
-  "lastExportedFrom": "A-TITANIC-84WiVTfj-8QFqs188-s2-pp3-m1",
+  "lastExportedFrom": "A-TITANIC-84WiVTfj-8QFqs188-s3-pp1-m1",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -1088,11 +1088,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584540600167
+    "lastModifiedOn": 1584541012250
   },
   "creationTag": {
     "versionNumber": 0,
