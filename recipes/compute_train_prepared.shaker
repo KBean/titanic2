@@ -37,8 +37,128 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 2
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "Name",
+        "keepEmptyChunks": false,
+        "limit": 0,
+        "separator": ",",
+        "outColPrefix": "Name_",
+        "limitOutput": false,
+        "target": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "createdColumnCount": 3
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnSplitter",
+      "params": {
+        "inCol": "Name_1",
+        "keepEmptyChunks": false,
+        "limit": 0,
+        "separator": ".",
+        "outColPrefix": "Attribute",
+        "limitOutput": false,
+        "target": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "Name_1",
+          "Name_0"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "MeasureNormalize",
+      "params": {
+        "column": "Attribute0"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "Attribute2",
+          "Attribute1"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if (Fare \u003c\u003d 3, 4, if(Fare \u003c\u003d 7, 3, if (Fare \u003e\u003d 30 \u0026\u0026 Fare \u003c\u003d 870, 1, 2))) ",
+        "column": "ticket_class"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "mapping": [
+          {
+            "from": "",
+            "to": "U"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "Cabin"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "SUBSTRING"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -46,7 +166,31 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "Embarked": 100,
+    "Survived": 100,
+    "Pclass": 100,
+    "Ticket": 100,
+    "PassengerId": 100,
+    "Name_1_2": 100,
+    "Sex": 100,
+    "Attribute2": 100,
+    "gender_flag": 100,
+    "Attribute1": 225,
+    "SibSp": 100,
+    "Attribute0": 100,
+    "Name": 300,
+    "Fare": 100,
+    "Parch": 100,
+    "Cabin": 100,
+    "Name_1_1": 225,
+    "Name_1_0": 100,
+    "married": 100,
+    "ticket_class": 105,
+    "Age": 100,
+    "Name_1": 239,
+    "Name_0": 113
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
