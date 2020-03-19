@@ -5,11 +5,11 @@
   "name": "myscenario",
   "active": false,
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584594912522
+    "lastModifiedOn": 1584594957947
   },
   "checklists": {
     "checklists": []
@@ -20,7 +20,21 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
+  "triggers": [
+    {
+      "id": "iftnbzUk",
+      "type": "ds_modified",
+      "delay": 900,
+      "active": true,
+      "params": {
+        "watches": []
+      },
+      "graceDelaySettings": {
+        "delay": 120,
+        "checkAgainAfterGraceDelay": true
+      }
+    }
+  ],
   "reporters": [],
   "params": {
     "steps": []
