@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584592752310
+    "lastModifiedOn": 1584592754248
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,7 +85,84 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "PassengerId",
+        "type": "bigint"
+      },
+      {
+        "name": "Survived",
+        "type": "bigint"
+      },
+      {
+        "name": "Pclass",
+        "type": "bigint"
+      },
+      {
+        "name": "Name",
+        "type": "string"
+      },
+      {
+        "name": "Title",
+        "type": "string"
+      },
+      {
+        "name": "Sex",
+        "type": "string"
+      },
+      {
+        "name": "Age",
+        "type": "double"
+      },
+      {
+        "name": "Age_category",
+        "type": "bigint"
+      },
+      {
+        "name": "SibSp",
+        "type": "bigint"
+      },
+      {
+        "name": "Parch",
+        "type": "bigint"
+      },
+      {
+        "name": "Ticket",
+        "type": "string"
+      },
+      {
+        "name": "Fare",
+        "type": "double"
+      },
+      {
+        "name": "ticket_class",
+        "type": "bigint"
+      },
+      {
+        "name": "Cabin_check",
+        "type": "string"
+      },
+      {
+        "name": "Embarked",
+        "type": "string"
+      },
+      {
+        "name": "proba_0",
+        "type": "double"
+      },
+      {
+        "name": "proba_1",
+        "type": "double"
+      },
+      {
+        "name": "prediction",
+        "type": "string"
+      },
+      {
+        "name": "prediction_correct",
+        "type": "boolean"
+      }
+    ],
     "userModified": true
   },
   "metrics": {
