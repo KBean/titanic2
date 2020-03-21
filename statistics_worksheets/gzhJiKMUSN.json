@@ -973,17 +973,57 @@
           }
         ],
         "id": "H7N9PPO"
+      },
+      {
+        "type": "pca",
+        "heatmapParams": {
+          "showValues": true,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0
+        },
+        "columns": [
+          {
+            "name": "Survived",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Pclass",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Age_category",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "SibSp",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Parch",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "Fare",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "ticket_class",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "id": "QvxfG2c"
       }
     ],
     "id": "I96ctEv"
   },
   "name": "Worksheet",
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584779535716
+    "lastModifiedOn": 1584779633576
   },
   "creationTag": {
     "versionNumber": 0,
