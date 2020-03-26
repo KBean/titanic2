@@ -24,6 +24,11 @@
         "type": "DATASET",
         "localName": "evalute_output",
         "rules": []
+      },
+      {
+        "type": "SCENARIO",
+        "localName": "MYSCENARIO",
+        "rules": []
       }
     ]
   },
@@ -190,11 +195,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585196061982
+    "lastModifiedOn": 1585196108258
   },
   "creationTag": {
     "versionNumber": 0,
