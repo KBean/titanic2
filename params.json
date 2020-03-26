@@ -8,7 +8,12 @@
       {
         "type": "WEB_APP",
         "localName": "KKWJyYG",
-        "rules": []
+        "rules": [
+          {
+            "targetProject": "COVID19",
+            "appearOnFlow": true
+          }
+        ]
       },
       {
         "type": "DATASET",
@@ -195,11 +200,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585196108258
+    "lastModifiedOn": 1585196137044
   },
   "creationTag": {
     "versionNumber": 0,
