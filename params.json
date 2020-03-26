@@ -4,7 +4,13 @@
     "authorizations": []
   },
   "exposedObjects": {
-    "objects": []
+    "objects": [
+      {
+        "type": "WEB_APP",
+        "localName": "KKWJyYG",
+        "rules": []
+      }
+    ]
   },
   "projectType": "REGULAR",
   "owner": "admin",
@@ -167,6 +173,13 @@
     "displayedState": {
       "checks": []
     }
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1585195888662
   },
   "creationTag": {
     "versionNumber": 0,
