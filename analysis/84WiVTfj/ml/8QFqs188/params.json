@@ -1298,7 +1298,13 @@
       "cache_node_ids": false,
       "checkpoint_interval": 10
     },
-    "custom_python": [],
+    "custom_python": [
+      {
+        "enabled": true,
+        "code": "# This sample code uses a standard scikit-learn algorithm, the Adaboost classifier.\n\n# Your code must create a \u0027clf\u0027 variable. This clf must be a scikit-learn compatible\n# model, ie, have at least fit(X,y) and predict(X) methods\n# For a classifier, it must also have a classes_ attribute\n\nfrom sklearn.ensemble import AdaBoostClassifier\n\nclf \u003d AdaBoostClassifier(n_estimators\u003d20)\n\n\"AdaBoost\"\n\nimport sklearn.ensemble\nclf \u003d sklearn.ensemble.AdaBoostClassifier(base_estimator\u003dNone, n_estimators\u003d50, learning_rate\u003d1.0, algorithm\u003d\u0027SAMME.R\u0027, random_state\u003dNone)\n\n\n",
+        "name": "AdaBoost"
+      }
+    ],
     "plugin_python": {},
     "keras": {
       "epochs": 10,
