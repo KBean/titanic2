@@ -1,0 +1,54 @@
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+public class DataikuTest {
+    public static void main(String[] args) throws Exception{
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) { 
+
+            HttpPost request = new HttpPost("http://localhost:11500/public/api/v1/test11/test11/predict");
+
+            /* Build the JSON POST Body */
+            JSONObject recordToPredict = new JSONObject();
+            recordToPredict.put("categorical_feature1","value1");
+            recordToPredict.put("numerical_feature1",42);
+            recordToPredict.put("categorical_feature2","value2");
+
+            JSONObject body = new JSONObject();
+            body.put("features", recordToPredict);
+            StringEntity bodyEntity = new StringEntity(body.toString());
+            request.setEntity(bodyEntity);
+            request.addHeader("content-type", "application/json");
+    
+            /* Execute the query */
+            HttpResponse resp = httpClient.execute(request);
+
+            if (resp.getStatusLine().getStatusCode() != 200) {
+                if (resp.getEntity().getContentType().getValue().contains("application/json")){
+                    JSONObject error = new JSONObject(new JSONTokener(resp.getEntity().getContent()));
+            
+                    if (error.has("detailedMessage")) {
+                        throw new IOException("API query failed with HTTP code " + resp.getStatusLine().getStatusCode() +" and message: " + error.getString("detailedMessage"));
+                    } else {
+                        throw new IOException("API query failed with HTTP code " + resp.getStatusLine().getStatusCode() +" and body: " + error.toString());
+                    }
+                } else {
+                    String s = IOUtils.toString(resp.getEntity().getContent(), StandardCharsets.UTF_8);
+                    throw new IOException("API query failed with HTTP code " + resp.getStatusLine().getStatusCode() +" and body: " + s);
+                }
+            }
+
+            /* Parse result */
+            JSONObject result = new JSONObject(new JSONTokener(resp.getEntity().getContent()));
+            System.out.println("Model returned:\n" + result + "\n");
+        }
+    }
+}
