@@ -1,7 +1,8 @@
 {
+  "name": "ADABoost",
   "endpoints": [
     {
-      "modelRef": "wlv8kfBU",
+      "modelRef": "T9hHWsMG",
       "useJava": true,
       "testQueries": [],
       "enrichMapping": [],
