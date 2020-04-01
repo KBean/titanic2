@@ -8,7 +8,7 @@
       "testQueries": [],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 * param3\n",
+      "code": "# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE\nimport dataiku\nimport pandas as pd, numpy as np\nfrom dataiku import pandasutils as pdu\nfrom textblob import TextBlob\n\ntweet_data_prepared_joined \u003d dataiku.Dataset(\"author_data_joined\")\ndf \u003d tweet_data_prepared_joined.get_dataframe()\n\ndef sentiment(arg):\n    try:\n        return TextBlob(arg).sentiment.polarity\n    except:\n        return\n\ndf[\u0027sentiment\u0027] \u003d df[\u0027tweet_simple\u0027].apply(sentiment)\n\nsentiment \u003d dataiku.Dataset(\"sentiment\")\nsentiment.write_with_schema(df)\n\n# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE\nfrom textblob import TextBlob\n\n# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE\ntweet_data_prepared_joined \u003d dataiku.Dataset(\"author_data_joined\")\ndf \u003d tweet_data_prepared_joined.get_dataframe()\n\ndef sentiment(arg):\n    try:\n        return TextBlob(arg).sentiment.polarity\n    except:\n        return\n\ndf[\u0027sentiment\u0027] \u003d df[\u0027tweet_simple\u0027].apply(sentiment)",
       "id": "test_restapi",
       "type": "PY_FUNCTION"
     }
