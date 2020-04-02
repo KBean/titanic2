@@ -1,6 +1,7 @@
 {
   "type": "Filesystem",
   "managed": true,
+  "shortDesc": "more comment",
   "formatType": "csv",
   "checklists": {
     "checklists": []
@@ -59,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1584543534259
+    "lastModifiedOn": 1585816395007
   },
   "creationTag": {
     "versionNumber": 0,

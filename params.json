@@ -149,8 +149,7 @@
       }
     }
   },
-  "name": "Titanic",
-  "projectStatus": "Sandbox",
+  "name": "Titanic (branch)",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -206,11 +205,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1585813448436
+    "lastModifiedOn": 1585816331560
   },
   "creationTag": {
     "versionNumber": 0,
@@ -219,8 +218,10 @@
     },
     "lastModifiedOn": 1584537063215
   },
-  "shortDesc": "The project *Titanic* was created by Administrator on Mar 18th 2020",
-  "tags": [],
+  "shortDesc": "The project *Titanic* was created by Administrator on Mar 18th 2020\nThe project *TITANIC_BRANCH* was copied from *TITANIC* by Administrator on Apr 02nd 2020",
+  "tags": [
+    "duplicated"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": [

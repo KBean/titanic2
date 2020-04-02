@@ -75,7 +75,7 @@
   "tags": [],
   "params": {
     "connection": "filesystem_managed",
-    "path": "${projectKey}/joined",
+    "path": "/TITANIC_BRANCH.joined",
     "notReadyIfEmpty": false,
     "filesSelectionRules": {
       "mode": "ALL",
